@@ -18,6 +18,20 @@
 //!     // ... write or read inside of that path
 //! }
 //! ```
+//!
+//! <br>
+//!
+//! # Comparisons
+//!
+//! Comparison to **`std::env::var_os("OUT_DIR")`**:
+//!
+//! - This functionality is different from OUT_DIR in that the same directory
+//!   path will be seen by *all* crates whose build passes a matching `suffix`
+//!   argument, and each crate can see content placed into the directory by
+//!   those other crates' build scripts that have already run.
+//!
+//! - This functionality is similar to OUT_DIR in that both are erased when a
+//!   `cargo clean` is executed.
 
 use std::path::{Path, PathBuf};
 
