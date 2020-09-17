@@ -109,8 +109,6 @@
 //! to the directory and the rest reading, more elaborate schemes involving
 //! `lock_shared` might be something to consider.
 
-#![allow(clippy::needless_doctest_main)]
-
 use std::fs;
 use std::path::{Path, PathBuf};
 
