@@ -1,7 +1,8 @@
 //! This crate exposes a compile-time temporary directory sharable by multiple
 //! crates in a build graph and erased by `cargo clean`.
 //!
-//! The intended usage is from a build.rs Cargo build script:
+//! The intended usage is from a build.rs Cargo build script, or more likely
+//! from a library which is called by other crates' build scripts.
 //!
 //! ```toml
 //! # Cargo.toml
