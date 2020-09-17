@@ -68,6 +68,47 @@
 //!     # Ok(())
 //! }
 //! ```
+//!
+//! This simplest approach is fine for a cache which is slow to fill (maybe a
+//! large download) but fast/almost immediate to use. On the other hand if the
+//! build scripts using your cache will take a while to complete even if they
+//! only read from the scratch directory, a different approach which allows
+//! readers to make progress in parallel would perform better.
+//!
+//! ```edition2018
+//! use std::fs::{self, File};
+//! use std::io;
+//!
+//! fn main() -> io::Result<()> {
+//!     let dir = scratch::path("demo");
+//!     let _ = fs::create_dir(&dir);
+//!     let flock = File::create(dir.join(".lock"))?;
+//!     let sdk = dir.join("thing.sdk");
+//!
+//!     if !sdk.exists() {
+//!         fs2::FileExt::lock_exclusive(&flock)?;
+//!         if !sdk.exists() {
+//!             let download_location = sdk.with_file_name("thing.sdk.partial");
+//!             download_sdk_to(&download_location)?;
+//!             fs::rename(&download_location, &sdk)?;
+//!         }
+//!         fs2::FileExt::unlock(&flock)?;
+//!     }
+//!
+//!     // ... now use the SDK
+//!     # Ok(())
+//! }
+//! #
+//! # use std::path::Path;
+//! #
+//! # fn download_sdk_to(location: &Path) -> io::Result<()> {
+//! #     fs::write(location, "...")
+//! # }
+//! ```
+//!
+//! For use cases that are not just a matter of the first build script writing
+//! to the directory and the rest reading, more elaborate schemes involving
+//! `lock_shared` might be something to consider.
 
 use std::path::{Path, PathBuf};
 
