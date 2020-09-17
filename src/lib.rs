@@ -60,7 +60,6 @@
 //!
 //! fn main() -> io::Result<()> {
 //!     let dir = scratch::path("demo");
-//!     let _ = fs::create_dir(&dir);
 //!     let flock = File::create(dir.join(".lock"))?;
 //!     fs2::FileExt::lock_exclusive(&flock)?;
 //!
@@ -81,7 +80,6 @@
 //!
 //! fn main() -> io::Result<()> {
 //!     let dir = scratch::path("demo");
-//!     let _ = fs::create_dir(&dir);
 //!     let flock = File::create(dir.join(".lock"))?;
 //!     let sdk = dir.join("thing.sdk");
 //!
@@ -110,8 +108,11 @@
 //! to the directory and the rest reading, more elaborate schemes involving
 //! `lock_shared` might be something to consider.
 
+use std::fs;
 use std::path::{Path, PathBuf};
 
 pub fn path(suffix: &str) -> PathBuf {
-    Path::new(env!("OUT_DIR")).join(suffix)
+    let p = Path::new(env!("OUT_DIR")).join(suffix);
+    let _ = fs::create_dir(&p);
+    p
 }
