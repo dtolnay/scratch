@@ -8,7 +8,7 @@
 //! # Cargo.toml
 //!
 //! [build-dependencies]
-//! scratch = "0.0"
+//! scratch = "1.0"
 //! ```
 //!
 //! ```

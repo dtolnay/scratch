@@ -16,7 +16,7 @@ library which is called by other crates' build scripts.
 # Cargo.toml
 
 [build-dependencies]
-scratch = "0.0"
+scratch = "1.0"
 ```
 
 ```rust
