@@ -19,3 +19,5 @@ jobs:
         with:
           toolchain: ${{matrix.rust}}
       - run: cargo build
+      - run: cargo test
+        if: matrix.rust != '1.0.0'
