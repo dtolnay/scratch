@@ -40,6 +40,34 @@
 //!
 //! - This functionality is different from temp_dir() in that `cargo clean`
 //!   cleans up the contents.
+//!
+//! <br>
+//!
+//! # Tips
+//!
+//! You'll want to consider what happens when Cargo runs multiple build scripts
+//! concurrently that access the same scratch dir. In some use cases you likely
+//! want some synchronization over the contents of the scratch directory, such
+//! as by an advisory [file lock]. On Unix-like and Windows host systems the
+//! simplest way to sequence the build scripts such that each one gets exclusive
+//! access one after the other is something like:
+//!
+//! [file lock]: https://man7.org/linux/man-pages/man2/flock.2.html
+//!
+//! ```edition2018
+//! use std::fs::{self, File};
+//! use std::io;
+//!
+//! fn main() -> io::Result<()> {
+//!     let dir = scratch::path("demo");
+//!     let _ = fs::create_dir(&dir);
+//!     let flock = File::create(dir.join(".lock"))?;
+//!     fs2::FileExt::lock_exclusive(&flock)?;
+//!
+//!     // ... now do work
+//!     # Ok(())
+//! }
+//! ```
 
 use std::path::{Path, PathBuf};
 

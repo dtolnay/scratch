@@ -10,5 +10,8 @@ categories = ["development-tools::build-utils"]
 readme = "README.md"
 build = "build.rs"
 
+[dev-dependencies]
+fs2 = "0.4"
+
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]
