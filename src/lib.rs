@@ -32,6 +32,14 @@
 //!
 //! - This functionality is similar to OUT_DIR in that both are erased when a
 //!   `cargo clean` is executed.
+//!
+//! Comparison to **`std::env::temp_dir()`**:
+//!
+//! - This functionality is similar to temp_dir() in that stuff that goes in is
+//!   visible to subsequently running build scripts.
+//!
+//! - This functionality is different from temp_dir() in that `cargo clean`
+//!   cleans up the contents.
 
 use std::path::{Path, PathBuf};
 
