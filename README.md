@@ -32,7 +32,7 @@ fn main() {
 
 ## Comparisons
 
-Comparison to **`std::env::var\_os("OUT\_DIR")`**:
+Comparison to **`std::env::var_os("OUT_DIR")`**:
 
 - This functionality is different from OUT\_DIR in that the same directory path
   will be seen by *all* crates whose build passes a matching `suffix` argument,
@@ -42,7 +42,7 @@ Comparison to **`std::env::var\_os("OUT\_DIR")`**:
 - This functionality is similar to OUT\_DIR in that both are erased when a
   `cargo clean` is executed.
 
-Comparison to **`std::env::temp\_dir()`**:
+Comparison to **`std::env::temp_dir()`**:
 
 - This functionality is similar to temp\_dir() in that stuff that goes in is
   visible to subsequently running build scripts.
