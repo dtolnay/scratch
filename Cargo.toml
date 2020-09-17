@@ -8,6 +8,7 @@ repository = "https://github.com/dtolnay/scratch"
 documentation = "https://docs.rs/scratch"
 categories = ["development-tools::build-utils"]
 readme = "README.md"
+build = "build.rs"
 
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]
