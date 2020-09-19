@@ -56,7 +56,7 @@
 //! [file lock]: https://man7.org/linux/man-pages/man2/flock.2.html
 //!
 //! ```edition2018
-//! use std::fs::{self, File};
+//! use std::fs::File;
 //! use std::io;
 //!
 //! fn main() -> io::Result<()> {

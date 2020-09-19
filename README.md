@@ -64,7 +64,7 @@ the other is something like:
 [file lock]: https://man7.org/linux/man-pages/man2/flock.2.html
 
 ```rust
-use std::fs::{self, File};
+use std::fs::File;
 use std::io;
 
 fn main() -> io::Result<()> {
