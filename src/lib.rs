@@ -109,6 +109,9 @@
 //! to the directory and the rest reading, more elaborate schemes involving
 //! `lock_shared` might be something to consider.
 
+#![cfg_attr(feature = "cargo-clippy", allow(renamed_and_removed_lints))]
+#![cfg_attr(feature = "cargo-clippy", allow(needless_doctest_main))]
+
 use std::fs;
 use std::path::{Path, PathBuf};
 

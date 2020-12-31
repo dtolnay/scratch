@@ -21,3 +21,11 @@ jobs:
       - run: cargo build
       - run: cargo test
         if: matrix.rust != '1.0.0'
+
+  clippy:
+    name: Clippy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: dtolnay/rust-toolchain@clippy
+      - run: cargo clippy -- -Dclippy::all
