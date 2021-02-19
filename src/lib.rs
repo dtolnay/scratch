@@ -112,7 +112,12 @@
 #![cfg_attr(feature = "cargo-clippy", allow(renamed_and_removed_lints))]
 #![cfg_attr(
     feature = "cargo-clippy",
-    allow(doc_markdown, must_use_candidate, needless_doctest_main)
+    allow(
+        doc_markdown,
+        let_underscore_drop,
+        must_use_candidate,
+        needless_doctest_main
+    )
 )]
 
 use std::fs;
