@@ -2,6 +2,7 @@
 name = "scratch"
 version = "1.0.0"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
+rust-version = "1.0"
 license = "MIT OR Apache-2.0"
 description = "Compile-time temporary directory shared by multiple crates and erased by `cargo clean`"
 repository = "https://github.com/dtolnay/scratch"
