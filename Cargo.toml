@@ -1,6 +1,6 @@
 [package]
 name = "scratch"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
 rust-version = "1.0"
 license = "MIT OR Apache-2.0"
