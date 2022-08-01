@@ -2,14 +2,14 @@
 name = "scratch"
 version = "1.0.1"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
-rust-version = "1.0"
-license = "MIT OR Apache-2.0"
-description = "Compile-time temporary directory shared by multiple crates and erased by `cargo clean`"
-repository = "https://github.com/dtolnay/scratch"
-documentation = "https://docs.rs/scratch"
-categories = ["development-tools::build-utils"]
-readme = "README.md"
 build = "build.rs"
+categories = ["development-tools::build-utils"]
+description = "Compile-time temporary directory shared by multiple crates and erased by `cargo clean`"
+documentation = "https://docs.rs/scratch"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/dtolnay/scratch"
+rust-version = "1.0"
 
 [dev-dependencies]
 fs2 = "0.4"
