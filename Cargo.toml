@@ -7,7 +7,6 @@ categories = ["development-tools::build-utils", "filesystem"]
 description = "Compile-time temporary directory shared by multiple crates and erased by `cargo clean`"
 documentation = "https://docs.rs/scratch"
 license = "MIT OR Apache-2.0"
-readme = "README.md"
 repository = "https://github.com/dtolnay/scratch"
 rust-version = "1.0"
 
