@@ -115,6 +115,7 @@
     allow(
         doc_markdown,
         let_underscore_drop,
+        let_underscore_untyped,
         must_use_candidate,
         needless_doctest_main
     )
