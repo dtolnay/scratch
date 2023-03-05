@@ -109,7 +109,7 @@
 //! to the directory and the rest reading, more elaborate schemes involving
 //! `lock_shared` might be something to consider.
 
-#![doc(html_root_url = "https://docs.rs/scratch/1.0.4")]
+#![doc(html_root_url = "https://docs.rs/scratch/1.0.5")]
 #![cfg_attr(feature = "cargo-clippy", allow(renamed_and_removed_lints))]
 #![cfg_attr(
     feature = "cargo-clippy",
