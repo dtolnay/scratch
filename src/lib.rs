@@ -11,7 +11,7 @@
 //! scratch = "1.0"
 //! ```
 //!
-//! ```
+//! ```edition2021
 //! // build.rs
 //!
 //! fn main() {
@@ -55,7 +55,7 @@
 //!
 //! [file lock]: https://man7.org/linux/man-pages/man2/flock.2.html
 //!
-//! ```edition2018
+//! ```edition2021
 //! use std::fs::File;
 //! use std::io;
 //!
@@ -75,7 +75,7 @@
 //! only read from the scratch directory, a different approach which allows
 //! readers to make progress in parallel would perform better.
 //!
-//! ```edition2018
+//! ```edition2021
 //! use std::fs::{self, File};
 //! use std::io;
 //!
