@@ -1,6 +1,6 @@
 [package]
 name = "scratch"
-version = "1.0.6"
+version = "1.0.7"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
 build = "build.rs"
 categories = ["development-tools::build-utils", "filesystem"]
