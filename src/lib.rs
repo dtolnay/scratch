@@ -110,9 +110,9 @@
 //! `lock_shared` might be something to consider.
 
 #![doc(html_root_url = "https://docs.rs/scratch/1.0.7")]
-#![cfg_attr(feature = "cargo-clippy", allow(renamed_and_removed_lints))]
+#![cfg_attr(clippy, allow(renamed_and_removed_lints))]
 #![cfg_attr(
-    feature = "cargo-clippy",
+    clippy,
     allow(
         doc_markdown,
         let_underscore_drop,
