@@ -111,16 +111,7 @@
 
 #![doc(html_root_url = "https://docs.rs/scratch/1.0.7")]
 #![cfg_attr(clippy, allow(renamed_and_removed_lints))]
-#![cfg_attr(
-    clippy,
-    allow(
-        doc_markdown,
-        let_underscore_drop,
-        let_underscore_untyped,
-        must_use_candidate,
-        needless_doctest_main
-    )
-)]
+#![cfg_attr(clippy, allow(doc_markdown, must_use_candidate, needless_doctest_main))]
 
 use std::fs;
 use std::path::{Path, PathBuf};
