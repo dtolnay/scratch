@@ -6,7 +6,7 @@ Shared scratch for build scripts
 [<img alt="docs.rs" src="https://img.shields.io/badge/docs.rs-scratch-66c2a5?style=for-the-badge&labelColor=555555&logo=docs.rs" height="20">](https://docs.rs/scratch)
 [<img alt="build status" src="https://img.shields.io/github/actions/workflow/status/dtolnay/scratch/ci.yml?branch=master&style=for-the-badge" height="20">](https://github.com/dtolnay/scratch/actions?query=branch%3Amaster)
 
-This crate exposes a compile-time temporary directory sharable by multiple
+This crate exposes a compile-time temporary directory shareable by multiple
 crates in a build graph and erased by `cargo clean`.
 
 The intended usage is from a build.rs Cargo build script, or more likely from a

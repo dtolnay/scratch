@@ -1,4 +1,4 @@
-//! This crate exposes a compile-time temporary directory sharable by multiple
+//! This crate exposes a compile-time temporary directory shareable by multiple
 //! crates in a build graph and erased by `cargo clean`.
 //!
 //! The intended usage is from a build.rs Cargo build script, or more likely
