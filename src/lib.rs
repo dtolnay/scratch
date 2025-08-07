@@ -109,7 +109,7 @@
 //! to the directory and the rest reading, more elaborate schemes involving
 //! [`lock_shared`][std::fs::File::lock_shared] might be something to consider.
 
-#![doc(html_root_url = "https://docs.rs/scratch/1.0.8")]
+#![doc(html_root_url = "https://docs.rs/scratch/1.0.9")]
 #![cfg_attr(clippy, allow(renamed_and_removed_lints))]
 #![cfg_attr(clippy, allow(doc_markdown, must_use_candidate, needless_doctest_main))]
 
