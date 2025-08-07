@@ -70,7 +70,7 @@ use std::io;
 fn main() -> io::Result<()> {
     let dir = scratch::path("demo");
     let flock = File::create(dir.join(".lock"))?;
-    fs2::FileExt::lock_exclusive(&flock)?;
+    flock.lock()?;
 
     // ... now do work
 }
@@ -92,13 +92,13 @@ fn main() -> io::Result<()> {
     let sdk = dir.join("thing.sdk");
 
     if !sdk.exists() {
-        fs2::FileExt::lock_exclusive(&flock)?;
+        flock.lock()?;
         if !sdk.exists() {
             let download_location = sdk.with_file_name("thing.sdk.partial");
             download_sdk_to(&download_location)?;
             fs::rename(&download_location, &sdk)?;
         }
-        fs2::FileExt::unlock(&flock)?;
+        flock.unlock()?;
     }
 
     // ... now use the SDK
