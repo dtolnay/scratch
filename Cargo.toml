@@ -8,7 +8,7 @@ description = "Compile-time temporary directory shared by multiple crates and er
 documentation = "https://docs.rs/scratch"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/dtolnay/scratch"
-rust-version = "1.0"
+rust-version = "1.89"
 
 [lib]
 name = "scratch"
