@@ -9,7 +9,7 @@ documentation = "https://docs.rs/scratch"
 edition = "2015"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/dtolnay/scratch"
-rust-version = "1.31"
+rust-version = "1.68"
 
 [lib]
 name = "scratch"
