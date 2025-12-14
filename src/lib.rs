@@ -110,8 +110,11 @@
 //! [`lock_shared`][std::fs::File::lock_shared] might be something to consider.
 
 #![doc(html_root_url = "https://docs.rs/scratch/1.0.9")]
-#![cfg_attr(clippy, allow(renamed_and_removed_lints))]
-#![cfg_attr(clippy, allow(doc_markdown, must_use_candidate, needless_doctest_main))]
+#![allow(
+    clippy::doc_markdown,
+    clippy::must_use_candidate,
+    clippy::needless_doctest_main
+)]
 
 use std::fs;
 use std::path::{Path, PathBuf};
